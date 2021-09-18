@@ -4,6 +4,11 @@ peer.on("open", function (){document.getElementById('idview').value = peer.id;})
 
 const videoElm = document.getElementById('video')
 
+function full()
+{
+    videoElm.requestFullscreen();
+}
+
 function main() 
 {
    // const peer = new Peer({key: '8bcc94dc-592d-4a96-bb15-1c80f2066616'});
@@ -14,7 +19,9 @@ function main()
         var file = event.target.files[0];
         //document.querySelector('video').src = URL.createObjectURL(file);
         fileToPlay = URL.createObjectURL(file);
-        videoElm.webkitRequestFullscreen();
+        //videoElm.webkitRequestFullscreen();
+        videoElm.src = fileToPlay;
+        videoElm.load()
         //document.getElementById('filename').innerHTML = document.querySelector('video').src;
     }, false );
 
@@ -25,9 +32,9 @@ function main()
             const videoElm = document.getElementById('video')
             if (msg == "play")
             {   
-                videoElm.src = fileToPlay;
                 videoElm.play();
                 videoElm.webkitRequestFullscreen();
+                videoElm.RequestFullscreen();
             }
             else
             {

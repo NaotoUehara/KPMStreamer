@@ -1,16 +1,15 @@
 <html>
   <head>  <link rel="stylesheet" href="receiver.css"></head>
   <link rel="manifest" href="manifest.webmanifest"/>
-  <body>
+  <body bgcolor="#000000">
     <p>share window</p>
     <input id="idview">id:</input>
     <div>
         <video id="video" muted style="
         background: #000; 
         z-index: 9999999999;" ></video>
-        <input id="id"></input>
-        
-        <input type="file" id="filename" value="ファイル読み込み"/><br/>
+        <input type="file" id="filename"/><br/>
+        <button id="btn" onclick="full();">full screen</button>
     </div>
     <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
     <script src="receiver.js"></script>
