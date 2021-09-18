@@ -2,7 +2,7 @@ const peer = new Peer({key: '8bcc94dc-592d-4a96-bb15-1c80f2066616'});
 var fileToPlay = null;
 peer.on("open", function (){document.getElementById('idview').value = peer.id;});
 
-const videoElm = document.getElementById('video')
+var videoElm = document.getElementById('video');
 
 function full()
 {
@@ -12,7 +12,7 @@ function full()
 function main() 
 {
    // const peer = new Peer({key: '8bcc94dc-592d-4a96-bb15-1c80f2066616'});
-
+   videoElm = document.getElementById('video')
     var fileInput = document.getElementById('filename')
     fileInput.addEventListener( "change", function (event) {
         var URL = URL || webkitURL;
